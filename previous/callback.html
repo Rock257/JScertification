@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback function</title>
+    <script src="/callback.js" ></script>
+</head>
+<body>
+    <h1>callback function</h1>
+
+    <pre>
+        // callback function 
+// note =  due to callback we can do asynchronous thing in Jaavascript as we know tha JS is a synchronous language
+//  it gives access to us do  asynchronous thing  in JS
+
+// if you call a function and pass another function inside in as a perameter called as callback function  
+
+// give responisibility of y function to the x function , no wits uto x when y is called , we passes the y inside x  , now its upto x when this y been called
+
+// why callback becauses they are callback at somewhere else when needed
+
+// this setTimeout takes a callback function 
+
+setTimeout( function() {
+    console.log('timer');
+},3000)
+
+function x(y) {
+    console.log('hello');
+//    y();
+}
+
+x( function y() {
+    console.log('JS');
+});
+
+
+//  javascript is a synchronous and single threaded language =  this means JS will do one thing at a time with the specic order
+
+//  Blocking the main thread
+
+//  power of callback
+
+// deep about event listener
+
+
+
+// closures demo with evnt listerers
+
+// scope demo with event kisteners 
+
+// garbage collection and removeEvent
+    </pre>
+    
+    <button id="click">Click Me</button>
+    <!-- <button id="logIn">Log In</button> -->
+</body>
+</html>

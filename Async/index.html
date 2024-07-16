@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Nature Of JS</title>
+    <style> 
+    body{
+        text-align: center;
+    }
+    li{
+        list-style: none;
+    }
+    </style>
+</head>
+<body>
+   
+    <h1>Async Nature Of JS</h1>  
+    <h3>Callback : "I will call back later!"</h3>
+    <br>
+    <ul>
+        <li>
+                <h3>Defination : A callback is a function passed as an argument   to another function
+
+        This technique allows a function to call another function
+        
+        A callback function can run after another function has finished</h3>
+        </li>
+        <li >
+            JavaScript functions are executed in the sequence they are called. Not in the sequence they are defined.
+        </li>
+        <div id="myDisplay"></div>
+        <br>
+        <span id="cal"></span>
+        <br>
+        <span id="mulCal"></span>
+        <br><br>
+        <span id="ex-3"></span>
+    </ul>
+    <section>
+        <div>
+            <h1>Asynchronous JavaScript</h1>
+            <p>"I will finish later!"
+
+                Functions running in parallel with other functions are called asynchronous
+                
+                A good example is JavaScript setTimeout()</p>
+        </div>
+        <span id="secEx2"></span>
+        <h2><span id="settime" style="background-color: gray; font-size: 3rem;"> </span></h2>
+    </section>
+    <section id="promise">
+        <div>
+             <h1>"I Promise a Result!"</h1>
+             <p>
+                <ul>
+                    <li>"Producing code" is code that can take some time</li>
+                    <li>"Consuming code" is code that must wait for the result</li>
+                    <li>A Promise is a JavaScript object that links producing code and consuming code</li>       
+                </ul>
+
+                <h3>  JavaScript Promise Object</h3>
+                 A JavaScript Promise object contains both the producing code and calls to the consuming code:
+             </p>
+             <p>
+               <h2> Promise Object Properties </h2>
+A JavaScript Promise object can be:
+<br>
+<br>
+
+<b>
+Pending
+<br>
+
+Fulfilled
+<br>
+Rejected
+
+</b>
+<br>
+<br>
+
+
+The Promise object supports two properties: state and result.
+
+While a Promise object is "pending" (working), the result is undefined.
+
+When a Promise object is "fulfilled", the result is a value.
+
+When a Promise object is "rejected", the result is an error object.
+
+myPromise.state	myPromise.result
+"pending"	undefined
+"fulfilled"	a result value
+"rejected"	an error object
+             </p>
+        </div>
+       
+        
+        <h2 id="result" style="background-color: aqua; font-size: 3rem;"></h2>
+        <div ><h2>Result will be display dfter 3 second</h2><h3 id="setTime"></h3></div>
+        <div><h3 id="clock" style="font-size: 3rem;"></h3></div>
+        <div id="promiseExample"></div>
+    </section>
+
+<!-- <script src="/script.js"></script>
+<script src="/asynchronous.js"></script> -->
+<script src="/promise.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+   
+    <!-- <script src="undefined.js" ></script> -->
+     <!-- <script src="in.js" ></script> -->
+      <!-- <script src="scope.js" ></script> -->
+      <!-- <script src="let_cons.js"></script> -->
+      <!-- <script src="block_scope9.js">  </script> -->
+      <!-- <script src="/closer_10.js">  </script> -->
+      <script src="/setTimeout.js">  </script>
+</head>
+<body>
+    <h1>Javascript</h1>
+    <p> <span style= 'color: red;' > hoisting in JS  </span> = it is a phenomena by hich wee can access the function and variable before defining it  </p>
+
+    <h1>Undefined  -  its just like a placeholder till the value is not defined to the variable</h1>
+    <hr>
+    <h1>JS is loosly type langauage i.e is does not attached its variable to any specific datatypes</h1>
+    <br>  <hr>
+    <b>Lexical environment =  <p>
+        function a() {
+            <br>
+        var c =30
+    <br>
+        function b(){
+    <br>
+        } <br>
+        b();
+        <br>
+    } <br>
+    a();
+    <h1>
+        lexical environment is the local memory and the reference to the  lexical environment of its paresnt <br>
+         here we can say that function c() is  <span style="color: blue; border: 2px solid black;  " >Lexically</span> sitting inside function a() or we can say that in order  or in hearachi
+         <br> or also we can say that the code physically present in the code 
+         <hr>
+         so lexical parent of fumction c() is function a()
+         <br>i.e  c() function will have access of lexical environment of a() also
+         <hr>
+         just as a() is   <span style="color: blue; border: 2px solid black;  " >Lexically</span> inside global scope
+         <br>
+         lexical parent of fumction a() is global
+ <hr>
+         <br>i.e  a() function will have access of lexical environment of global also
+        <br>
+        the whole chain of lexical environment is called  as scope chain , its describe the wheather the a variable or function is inside the scope or not
+    </h1>
+
+</p></b>
+  
+    <hr>
+    <h1>Scope = = where you can access a specific variable and function in our code</h1>
+    <section>
+        <h1  style="text-align:center; text-decoration: underline; text-transform: capitalize;">lecture - 8</h1>
+        <p>
+            <ol style="text-decoration: solid; font-size: 20px; text-transform: capitalize;" >
+                <li>temporal dead zone</li>
+                <li>let and cons declaration</li>
+                <li>diff bw synatx error ,  reference error , type error</li>
+            </ol>
+
+            
+            <p>
+                <h1>reference error  = </h1>
+            
+            (
+                console.log(a); <br>
+                let a = 299;<br>
+                var b =350;<br>
+            )
+            <b>            for let a can't tbe access  before initialization
+             Uncaught ReferenceError: Cannot access 'a' before initialization 
+            <br> it can be access after inilisation 
+        </b>
+
+        <h1> <b> "let and cons " will be maintained in seperate storage in script in browser not in global storage like ' var '</b></h1>
+             </p>
+
+            <h1><b>Synatx error = </b></h1> 
+            <br>let a = 299;
+            <br>
+                var a =350;
+<br>
+             Uncaught SyntaxError: Identifier 'a' has already been declared
+             <br>
+             we cannot use the same name in same  scope again
+             <br>
+             it does not exexute a single line of code not even log any code of line  
+        </p>
+    </section>
+    <hr>
+    <section>
+        <h1> block = a block is defined by {  }  curly braces also known as compound statements 
+            <br>
+        a block is used to multiple JS statements into a group the will be used  where JS  expects single statements  and we need to add multiple statements instead of single statements
+        </h1>
+
+        <h1>Shadowing  = when a block element will shadow or over-write the global element at it memory space </h1>
+    </section>
+    <section>
+        <h1>
+            Closures = a Closures is the combination of a function bundeled together (enclosed ) with references to its surrounding state(the lexical environment ) . in other words  a closures give access  to an outer  function's scope  from an inner function  in JS 
+            Closures are created everytime  a function is created , at function creation time
+        </h1>
+
+       <b> <h1 style="text-transform: uppercase; font-size: larger;">
+            function along with its lexical scope  bundled together forms a  closures</h1></b>
+            <h2>uses of closures</h2>
+            <ol>
+            <li>module design pattern</li>
+            <li>currying </li>
+            <li> function like once </li>
+            <li> memoize </li>
+            <li> maintaing state  in async world</li>
+            <li> setTimeouts </li>
+            <li> iterators</li>
+            </ol>
+            
+    </section>
+</body>
+
+
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="/closure.js" ></script> -->
+    <script src="/interview.js" ></script>
+</head>
+<body>
+    <h1 style="font-size: 40px; text-transform: uppercase;" >closure</h1>
+
+    <div>
+        <pre>
+            function x(){ 
+                var a = 20;
+                function y() {
+                    console.log(a)
+                }
+
+                return y
+            }
+            var z = x();
+            console.log(z)
+             z()
+             
+            <h3>
+             once the function y() return outside , as the function is in the function x() we return the function from it as the execution context of x is vanished  totally
+            
+            now the function y() will no longer  reside in the function x()  then how will it behave outside the x()  , then how will it behave in other lexical scope
+            now the z() have a reference  or function y() inside it  now how it will be behave outside the scope before it was inside x()
+            
+            </h3>
+           
+           
+        </pre>
+    </div>
+
+    <pre>
+        
+        <p style="color: rgb(46, 46, 87);"> Example 1</p>
+        function x(){
+            var i = 100;
+            setTimeout( function () {
+                console.log(i);
+            }, 4000) ;
+            console.log("Hello JS")
+        }
+        x()
+       <h3 >
+        
+        setTimeout - this fn is used to showoutput after  certain duration of time 
+        i will be print in console after 5 sec. 5000 = 5 sec
+        the 'Hello JS' print in console before then the i
+       </h3> 
+       <h4>
+        function () {
+            console.log(i);
+        }
+        this function forms a closure , which will remember the reference to i and it islike forms a closure 
+        wherever this function goes it takes along with itthe reference of i with it 
+       </h4>
+    </pre>
+    <div>
+        <pre>
+            <h3>
+                print No from 1 to 6 with interval og 3 sec 
+
+function x(){
+    for(
+        var i =1;
+        i<= 5;
+        i++) {
+            setTimeout (function(){
+                console.log(i);
+            }, i*1000);
+        }
+        console.log('hello JS')
+    
+    
+}
+x()
+
+            </h3>
+            <h2><b> note  = it will not print 1 to 6 instead of this it  prints 6 for six times with given time interval </b></h2>
+
+            <h1 style="color:red;"> Why</h1>
+            <h2 style="color: green;"> Here is the reason where closure works
+                <pre>
+                    as we know that the function which makes closure with another function , the closure fumction  will reference the 'i ' not the value of 'i' 
+                    when we invoke the function the function is store somewhere  with the its bounded lexical scope it contain the reference to the 'i'
+                    not the value of 'i' 
+                    now when the loops runs the first time so it attached  the copy  of function with with the timer and also remember the value of 'i' 
+                    1.  similarly ALL THESE COPY OF 5 function POINTING   TO THE SAME  reference OF 'i' BECAUSE THE ENVIRONMENT OF ALL THESE ARE SAME
+                    2.  JS will not anything as we see above  Example 1 , it will run the loop again and again and setTimeout will store them  the copy of function it does not wait for timer to expire
+                </pre>
+            </h2>
+        </pre>
+    </div>
+    
+</body>
+</html>
