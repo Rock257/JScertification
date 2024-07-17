@@ -1,3 +1,40 @@
+var n = 3 ;
+
+const square = (num)=>{
+    var ans = num*num 
+    return ans ;
+}
+
+
+var square2 = console.log(square(n))
+var square3 = console.log(square(4))
+
+// how js works 
+
+// global execution context  ->  1. memory component(memory allocation to all variable and function)  2. code execution  component 
+
+//callstack maintaines the order of executions of execution contexts
+
+// call stack  = execution context stack  = program stack = controll stack  = runtime stack = machine stack
+
+
+
+// Web APIs 
+
+// setTimeout
+// fetch
+// localStorage
+// console
+// location
+// DOM APIs (document  )
+
+
+
+
+
+
+
+
 console.log("hello");
 console.log("season -2");
 
